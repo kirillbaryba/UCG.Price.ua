@@ -1,0 +1,30 @@
+.sprite {
+    background-image: url('../images/icons/png/spritesheet.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sprite-arrows-up {
+    width: 21px;
+    height: 12px;
+    background-position: -5px -5px;
+}
+
+.sprite-facebook {
+    width: 7px;
+    height: 13px;
+    background-position: -36px -5px;
+}
+
+.sprite-google {
+    width: 19px;
+    height: 12px;
+    background-position: -5px -27px;
+}
+
+.sprite-twitter {
+    width: 15px;
+    height: 13px;
+    background-position: -53px -5px;
+}

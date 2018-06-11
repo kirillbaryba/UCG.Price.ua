@@ -50,7 +50,9 @@ exports.loadPug = (options) => ({
           },
           {
             loader: 'pug-html-loader',
-            options
+            options:{
+              pretty: true
+            }
           }
         ]
       }
@@ -154,7 +156,7 @@ exports.loadImages = ({ include, exclude, options } = {}) => ({
         exclude,
 
         use: {
-          loader: 'url-loader',
+          loader: 'file-loader', // url-loader for base64
           options
         }
       }
