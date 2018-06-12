@@ -1,10 +1,10 @@
+@import 'normalize';
+@import 'media-queries';
+
 @import 'fonts';
 @import 'icons';
 @import 'social';
 @import '/controls/controls';
-@import 'media-queries';
-
-@import 'normalize';
 
 $price-primary: #348ae0;
 
@@ -18,7 +18,7 @@ img{
   height: auto;
 }
 .container{
-  max-width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -35,8 +35,11 @@ img{
     display: inline-block;
     vertical-align: middle;
   }
-    &__item + &__item{
-      margin-left: 30px;
+    &__item + &__item{        
+        margin-left: 30px;    
+        @include mobile-portrait{
+          margin: 0;
+        }  
   }
 }  
 // Preview sections
@@ -44,9 +47,12 @@ img{
   display: flex;
   align-items: center;
   justify-content: space-between;    
+
+
   @include tablet-portrait-down{    
     flex-direction: column;    
-  }  
+  }    
+
   &__item{
     flex-basis: 50%;
     &--info{
@@ -73,12 +79,20 @@ img{
     margin: 0 0 15px
   }
 }
+//Parts__preview
+.section-preview{
+  @include desktop-up{
+    padding-bottom: 200px;
+  }
+}
 
 // Parts__sea
 .section-sea {
   background: url('../images/bg-sea.png') #f4f3f3 no-repeat center center;  
-  background-size: cover;
-  padding: 100px 0;
+  background-size: cover;  
+  padding: 230px 0 100px;
+  position: relative;
+  
   @include tablet-portrait-down{
     padding: 30px 0;
   }
@@ -296,4 +310,5 @@ img{
 .copyright{
   color: #fff;
   font-size: 14px;  
+  text-align: center;
 }

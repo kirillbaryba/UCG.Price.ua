@@ -1,5 +1,8 @@
 $btn-font-size: 14px;
+
+$btn-font-color: #fff;
 $btn-primary: #f86210;
+$btn-default: #348ae0;
 
 .btn{    
     font-size: $btn-font-size;
@@ -11,15 +14,19 @@ $btn-primary: #f86210;
     display: inline-block;
     text-decoration: none;
     transition: all ease .3s;
-
-    &--primary{
-        color: #fff;
-        background-color: $btn-primary;
-    }
-
+    
     &:hover, &:focus, &:active{
         opacity: .8;
     }
+
+    &--primary{
+        color: $btn-font-color;
+        background-color: $btn-primary;
+    }
+    &--default{
+        color: $btn-font-color;
+        background-color: $btn-default;
+    }    
 }
 
 .btn-box{

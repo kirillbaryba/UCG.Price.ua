@@ -1,10 +1,19 @@
+$color-bg: #f4f3f3;
+$color-tx: #fff;
+
 .social{
-    
+    &__box{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__tx{
+        color: $color-tx;
+    }
     &__item{
         width: 25px;
         height: 25px;
         border-radius: 5px;
-        background-color: #f4f3f3;
+        background-color: $color-bg;
         display: inline-block;
         vertical-align: middle;        
         text-align: center;
