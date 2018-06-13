@@ -1,10 +1,12 @@
 $btn-font-size: 14px;
 
 $btn-font-color: #fff;
-$btn-primary: #f86210;
-$btn-default: #348ae0;
+$btn-primary: $price-primary;
+$btn-default: $price-default;
 
 .btn{    
+    $this: &;
+
     font-size: $btn-font-size;
     font-weight: 600;
     text-transform: uppercase;
@@ -18,7 +20,14 @@ $btn-default: #348ae0;
     &:hover, &:focus, &:active{
         opacity: .8;
     }
-
+    &#{$this}--sm{
+        line-height: 38px;
+        font-weight: normal;
+        padding: 0 15px;
+        @include tablet-portrait-down{
+            font-size: 10px;
+        }        
+    }
     &--primary{
         color: $btn-font-color;
         background-color: $btn-primary;

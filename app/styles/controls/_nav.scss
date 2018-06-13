@@ -1,15 +1,24 @@
 .nav{
     $this: &;
 
-    display: flex;
-    margin-bottom: 60px;
-    position: absolute;
+    position: absolute;    
     top: -125px;
+    left: 0;
+    right: 0;    
+    width: 100%;
+    justify-content: center;
 
     &--desktop{
+        display: none;
         @include desktop-up{
             padding-bottom: 200px;
-          }
+        }
+        @include tablet-landscape-up{
+            display: flex;
+        }
+    }
+    &--category{
+        
     }
 
     &--fixed{

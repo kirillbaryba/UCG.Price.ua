@@ -70,7 +70,7 @@ const commonConfig = merge([
     },
     plugins: [
       new HtmlPlugin({
-        template: './index.pug'
+        template: './category.pug'
       }),
       new FriendlyErrorsPlugin(),
       new StylelintPlugin(lintStylesOptions)
