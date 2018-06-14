@@ -17,16 +17,16 @@ $(function(){
   const scrollTopHeight = 100;
 
   const $panel = $('.nav-panel');
-  const panelFixed = 'nav-panel--scrolled';
+  const panelScrolled = 'nav-panel--scrolled';
 
    $(window).scroll(function() {
 
      var scroll = getCurrentScroll();
        if ( scroll >= scrollTopHeight ) {
-            $panel.addClass(panelFixed);
+            $panel.addClass(panelScrolled);
          }
          else {
-            $panel.removeClass(panelFixed);
+            $panel.removeClass(panelScrolled);
          }
    });
 
