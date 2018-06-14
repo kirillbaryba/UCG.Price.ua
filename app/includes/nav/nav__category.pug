@@ -1,11 +1,16 @@
-//- add .nav-panel--fixed onScrollDown
-.nav-panel    
+//- js .nav-panel--fixed onScrollDown
+.nav-panel
     .nav-panel__box
         .nav-logo        
             a(class="nav-logo__item" href="#")
                 img(class='logo__ictv' src='./images/ictv-logo.png' alt='ictv')      
             a(class="nav-logo__item" href="#")
                 img(class='logo__price' src='./images/price-logo.png' alt='price') 
+        
+        //- js nav-btn--active
+        button(class="nav-btn nav-btn--right" type="btn")  
+            .nav-btn__icon
+
         .nav-menu
             .nav-menu__item
                 a(class="nav-menu__link" href="index.html/#nav-see")
@@ -19,4 +24,4 @@
             .nav-menu__item
                 a(class="nav-menu__link" href="index.html/#nav-home")
                     span.btn.btn--round.btn--default Дома  
-        button(class="nav-btn" type="btn")              
+        

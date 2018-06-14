@@ -71,17 +71,26 @@
 
 //mobile-nav
 .nav-panel{
+    position: fixed;
+    top: 0;
     width: 100%;    
-    height: 70px;
-    margin: 15px 0 90px;
+    height: 70px;    
     background-color: #fff;    
 
-    &--fixed{
+    @include tablet-landscape-down{
+        height: 50px;  
+        margin-bottom: 30px;
+    }
+
+    &--scrolled{
         top: 0;
-        left: 0;        
-        position: fixed;      
+        left: 0;                        
         z-index: 10;     
         box-shadow: -2px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        
+        @include tablet-landscape-down{
+            height: 50px;            
+        }
     }   
 
     &__box{
@@ -96,14 +105,20 @@
 //nav-menu
 .nav-menu{
     display: flex;
-    @include desktop-down{
+    
+    @include tablet-landscape-down{
         display: none;
     }
+
     &__item{         
         position: relative;        
     }
     &__item + &__item{
         margin-left: 20px;
+
+        @include tablet-landscape-down{
+            margin: 30px 0 0;
+        }
     }
 
     &__link{
@@ -127,7 +142,13 @@
 }
 
 .nav-logo{
-    display: flex;    
+    display: flex;  
+    align-items: center;  
+    flex-basis: 30%;
+    z-index: 3;         
+    @include tablet-landscape-down{
+        flex-basis: 200px;
+    }    
     &__item{        
         font-size: 0;
         display: inline-block;        

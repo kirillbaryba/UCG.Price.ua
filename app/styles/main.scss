@@ -14,6 +14,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   background-color: #fff;
   font-size: 14px;
+  min-width: 320px;
 }
 img{ 
   max-width: 100%;
@@ -61,7 +62,7 @@ img{
     flex-basis: 50%;
     justify-content: space-around;
     &--promo{
-      flex-basis: 40%;
+      padding-right: 10%;
 
       @include tablet-portrait-down{    
         margin-bottom: 30px;
@@ -79,9 +80,7 @@ img{
     font-size: 36px;
     text-transform: uppercase;
     color: #1976d2;
-    @include tablet-portrait-down{      
-      text-align: center;
-    }
+        
     &--xl{
       font-size: 46px;
       @include mobile{
@@ -165,6 +164,9 @@ img{
 }
 
 //Categories
+.category-page{
+  padding-top: 90px;
+}
 .categories {
   $this: &;
   display: flex;  

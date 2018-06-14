@@ -79,8 +79,8 @@ const commonConfig = merge([
       noParse: /\.min\.js/
     }
   },
-  parts.loadPug(),
-  parts.lintJS({ include: paths.app, options: lintJSOptions }),
+  parts.loadPug(),  
+  //parts.lintJS({ include: paths.app, options: lintJSOptions }),
   parts.loadFonts({
     include: paths.app,
     options: {
