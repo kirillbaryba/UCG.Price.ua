@@ -22,7 +22,7 @@ img{
 .container{
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 15px;  
 }
 //logos
 .logo{
@@ -59,6 +59,18 @@ img{
 
   &__item{
     flex-basis: 50%;
+    justify-content: space-around;
+    &--promo{
+      flex-basis: 40%;
+
+      @include tablet-portrait-down{    
+        margin-bottom: 30px;
+      }
+    }
+    &--img{
+      flex-basis: 60%;
+      text-align: right;
+    }
     &--info{
       flex-basis: 40%;
     }    
