@@ -113,10 +113,7 @@
     }
 
     &--open{
-        overflow: hidden;
-        .nav-btn--right{
-            right: 32px;
-        }
+        overflow: hidden;        
     }
     &__item{         
         position: relative;        
@@ -152,10 +149,10 @@
 .nav-logo{
     display: flex;  
     align-items: center;  
-    flex-basis: 30%;
+    flex: 1 0 30%;
     z-index: 3;         
     @include tablet-landscape-down{
-        flex-basis: 200px;
+        flex: 0 0 200px;
     }    
     &__item{        
         font-size: 0;
