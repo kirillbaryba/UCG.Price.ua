@@ -1,23 +1,35 @@
 import './../styles/main.scss'
 
 if (process.env.NODE_ENV !== 'production') {
-  require('./../category.pug')
+  require('./../index.pug')
 }
 
-// btn-toogle
+
+
+// nav-menu
 $(function(){
+
   $('.nav-btn').on('click', function () {
     $(this).toggleClass('nav-btn--active')
+    $('body').toggleClass('nav-menu--open');
   });
+
+  $('.nav-menu__link').on('click', function () {
+    $('.nav-btn').removeClass('nav-btn--active');
+    $('body').removeClass('nav-menu--open');
+  });
+  
 });
+
+
 
 //fixed panel onScroll
 $(function(){
 
-  const scrollTopHeight = 100;
+  var scrollTopHeight = 100;
 
-  const $panel = $('.nav-panel');
-  const panelScrolled = 'nav-panel--scrolled';
+  var $panel = $('.nav-panel');
+  var panelScrolled = 'nav-panel--scrolled';
 
    $(window).scroll(function() {
 

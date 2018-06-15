@@ -261,7 +261,8 @@ exports.page = ({
   entry,
   plugins: [
     new HtmlWebpackPlugin({
-      filename: `${path && path + '/'}category.html`,
+      //filename: `${path && path + '/'}category.html`,
+      filename: `${path && path + '/'}index.html`,
       template,
       title,
       chunks

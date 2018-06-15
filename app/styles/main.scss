@@ -80,7 +80,7 @@ img{
     font-size: 36px;
     text-transform: uppercase;
     color: #1976d2;
-        
+
     &--xl{
       font-size: 46px;
       @include mobile{
@@ -155,6 +155,7 @@ img{
     bottom: 0;
   }
 }
+
 .section-promo{
   background-color: #fff;
   padding: 30px 0;
@@ -164,9 +165,14 @@ img{
 }
 
 //Categories
-.category-page{
+.index-page, .category-page{
   padding-top: 90px;
+  
+  @include tablet-landscape-down{
+    padding-top: 50px;
+  }
 }
+
 .categories {
   $this: &;
   display: flex;  
